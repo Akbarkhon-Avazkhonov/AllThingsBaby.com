@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Outfit:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brand Colors - OKLch Format */
+  --sage-spark: oklch(0.61 0.098 155.14);
+  --wild-honey: oklch(0.72 0.147 71.18);
+  --petal-pink: oklch(0.77 0.101 24.35);
+  --oatmeal-linen: oklch(0.98 0.008 70.08);
+  
+  --background: var(--oatmeal-linen);
+  --foreground: oklch(0.25 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0 0);
+  --primary: var(--sage-spark);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--wild-honey);
+  --secondary-foreground: oklch(0.25 0 0);
+  --muted: oklch(0.92 0.01 70.08);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: var(--petal-pink);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.01 70.08);
+  --input: oklch(1 0 0);
+  --ring: var(--sage-spark);
+  --chart-1: var(--sage-spark);
+  --chart-2: var(--wild-honey);
+  --chart-3: var(--petal-pink);
+  --chart-4: oklch(0.62 0.08 240);
+  --chart-5: oklch(0.7 0.09 280);
+  --radius: 1.5rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: var(--sage-spark);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: var(--wild-honey);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: var(--sage-spark);
+}
+
+.dark {
+  --background: oklch(0.15 0 0);
+  --foreground: var(--oatmeal-linen);
+  --card: oklch(0.2 0 0);
+  --card-foreground: var(--oatmeal-linen);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: var(--oatmeal-linen);
+  --primary: var(--sage-spark);
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: var(--wild-honey);
+  --secondary-foreground: oklch(0.15 0 0);
+  --muted: oklch(0.35 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: var(--petal-pink);
+  --accent-foreground: oklch(0.15 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.25 0 0);
+  --ring: var(--sage-spark);
+  --chart-1: var(--sage-spark);
+  --chart-2: var(--wild-honey);
+  --chart-3: var(--petal-pink);
+  --chart-4: oklch(0.62 0.08 240);
+  --chart-5: oklch(0.7 0.09 280);
+  --sidebar: oklch(0.2 0 0);
+  --sidebar-foreground: var(--oatmeal-linen);
+  --sidebar-primary: var(--sage-spark);
+  --sidebar-primary-foreground: var(--oatmeal-linen);
+  --sidebar-accent: var(--wild-honey);
+  --sidebar-accent-foreground: oklch(0.15 0 0);
+  --sidebar-border: oklch(0.35 0 0);
+  --sidebar-ring: var(--sage-spark);
+}
+
+@theme inline {
+  --font-sans: 'Outfit', 'Outfit Fallback', sans-serif;
+  --font-display: 'Potta One', cursive;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 8px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Organic shapes and animations */
+@layer utilities {
+  .organic-blob-1 {
+    clip-path: polygon(
+      0% 50%,
+      5% 35%,
+      15% 25%,
+      30% 20%,
+      50% 15%,
+      70% 20%,
+      85% 30%,
+      95% 45%,
+      100% 65%,
+      95% 80%,
+      75% 90%,
+      50% 95%,
+      25% 92%,
+      10% 85%,
+      2% 70%
+    );
+  }
+  
+  .organic-blob-2 {
+    clip-path: polygon(
+      0% 45%,
+      10% 30%,
+      25% 15%,
+      45% 8%,
+      65% 12%,
+      80% 25%,
+      92% 45%,
+      98% 70%,
+      90% 88%,
+      70% 95%,
+      45% 98%,
+      20% 92%,
+      5% 75%
+    );
+  }
+
+  .float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-slower {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-10px) rotate(2deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(-1deg);
+    }
+    75% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+  }
+
+  @keyframes subtle-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(139, 191, 159, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(139, 191, 159, 0.6);
+    }
+  }
+
+  .glow-soft {
+    animation: subtle-glow 3s ease-in-out infinite;
+  }
+}
