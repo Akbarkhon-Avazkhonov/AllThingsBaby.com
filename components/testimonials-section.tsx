@@ -1,22 +1,27 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: 'Sarah Mitchell',
+      name: 'Anna Volkov',
       role: 'Parent of Twin Babies',
+      image: '/avatars/anna-volkov.jpg',
       content: 'AllThingsBaby products have been a game-changer for us. My babies have sensitive skin and these are the only products that don\'t cause irritation.',
       rating: 5,
     },
     {
-      name: 'Dr. Jennifer Lee',
+      name: 'Dr. James Chen',
       role: 'Pediatrician',
+      image: '/avatars/dr-james-chen.jpg',
       content: 'I confidently recommend AllThingsBaby to all my patients. The quality and safety standards are exceptional.',
       rating: 5,
     },
     {
-      name: 'Emma Rodriguez',
+      name: 'Maya Patel',
       role: 'First-Time Mom',
+      image: '/avatars/maya-patel.jpg',
       content: 'I love knowing that I\'m making an environmentally responsible choice while caring for my baby. The products are beautiful and effective.',
       rating: 5,
     },
@@ -48,9 +53,19 @@ export default function TestimonialsSection() {
               <p className="text-foreground/80 mb-6 leading-relaxed italic">
                 "{testimonial.content}"
               </p>
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-foreground/60">{testimonial.role}</p>
+              <div className="flex items-center gap-4 border-t border-border pt-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-foreground/60">{testimonial.role}</p>
+                </div>
               </div>
             </div>
           ))}
