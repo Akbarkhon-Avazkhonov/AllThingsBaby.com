@@ -45,7 +45,16 @@ export default function HeroSection() {
     <section
       ref={containerRef}
       className="relative w-full min-h-screen bg-gradient-to-b from-background via-background to-background/80 overflow-hidden flex items-center justify-center"
+      style={{
+        backgroundImage: 'url(/bg-hero.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
     >
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-background/40 z-0" />
+
       {/* Animated Glow */}
       <div
         ref={glowRef}
