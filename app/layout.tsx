@@ -10,20 +10,7 @@ export const metadata: Metadata = {
   description: 'Pure beginnings naturally. Shop premium eco-friendly baby products from swaddles to toys.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/favicon.jpg',
     apple: '/apple-icon.png',
   },
 }
