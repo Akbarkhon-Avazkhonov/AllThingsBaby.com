@@ -60,13 +60,6 @@ export default function ProductCard({
           <p className="text-foreground/70 text-sm mb-4">
             Premium quality, eco-conscious design
           </p>
-
-          {/* Button */}
-          <div className="flex items-center justify-center pt-4 border-t border-border">
-            <button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg px-6 py-2 text-sm font-semibold transition-all duration-300 transform hover:scale-105">
-              Add
-            </button>
-          </div>
         </div>
       </div>
     </div>
