@@ -43,9 +43,6 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-2 rounded-lg font-medium text-sm transition-colors">
-              Cart (0)
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,9 +72,6 @@ export default function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-2 rounded-lg font-medium text-sm transition-colors mt-4">
-                Cart (0)
-              </button>
             </div>
           </div>
         )}
