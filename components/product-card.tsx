@@ -1,7 +1,6 @@
 interface ProductCardProps {
   id: string;
   name: string;
-  price: number;
   image: string;
   category: string;
   isOrganic?: boolean;
@@ -10,7 +9,6 @@ interface ProductCardProps {
 export default function ProductCard({
   id,
   name,
-  price,
   image,
   category,
   isOrganic = true,
@@ -63,12 +61,9 @@ export default function ProductCard({
             Premium quality, eco-conscious design
           </p>
 
-          {/* Price and Button */}
-          <div className="flex items-center justify-between pt-4 border-t border-border">
-            <span className="font-display text-2xl text-primary font-bold">
-              ${price.toFixed(2)}
-            </span>
-            <button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-300 transform hover:scale-105">
+          {/* Button */}
+          <div className="flex items-center justify-center pt-4 border-t border-border">
+            <button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg px-6 py-2 text-sm font-semibold transition-all duration-300 transform hover:scale-105">
               Add
             </button>
           </div>
