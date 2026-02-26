@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function BenefitsSection() {
   return (
     <section className="w-full py-20 px-4 md:px-8 bg-gradient-to-r from-primary/5 to-accent/5">
@@ -40,10 +42,16 @@ export default function BenefitsSection() {
           </div>
 
           {/* Right side - Visual */}
-          <div className="bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-3xl p-8 h-96 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-7xl mb-4">🌱</div>
-              <p className="text-foreground/60">Eco-friendly baby care that you can trust</p>
+          <div className="relative rounded-3xl overflow-hidden h-96 shadow-lg">
+            <Image
+              src="/benefits-illustration.jpg"
+              alt="Eco-friendly baby care illustration"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent flex items-end justify-center p-6">
+              <p className="text-foreground font-display text-xl text-center">Eco-friendly baby care that you can trust</p>
             </div>
           </div>
         </div>
